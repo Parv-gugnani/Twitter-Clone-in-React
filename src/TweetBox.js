@@ -1,6 +1,5 @@
 import { Avatar, Button } from "@material-ui/core";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import db from "./firebase";
 import "./TweetBox.css";
 
@@ -13,7 +12,7 @@ function TweetBox() {
 
     db.collection("posts").add({
       username: "parvgugnani",
-      displayName: "Parv gugnani",
+      displayName: "Parv Gugnani", // Corrected capitalization
       Avatar:
         "https://avataaars.io/?avatarStyle=Circle&topType=Turban&accessoriesType=Prescription02&hatColor=White&facialHairType=BeardMedium&facialHairColor=BrownDark&clotheType=Overall&clotheColor=Blue03&eyeType=Happy&eyebrowType=Angry&mouthType=Eating&skinColor=Yellow",
       verified: true,
@@ -24,14 +23,16 @@ function TweetBox() {
     setTweetImage("");
     setTweetMessage("");
   };
+
+  return (
+    <div className="tweetBox">
+      <form>
+        <div className="tweetBox__input">
+          <Avatar src="https://avataaars.io/?avatarStyle=Circle&topType=Turban&accessoriesType=Prescription02&hatColor=White&facialHairType=BeardMedium&facialHairColor=BrownDark&clotheType=Overall&clotheColor=Blue03&eyeType=Happy&eyebrowType=Angry&mouthType=Eating&skinColor=Yellow" />
+        </div>
+      </form>
+    </div>
+  );
 }
 
-return (
-  <div className="tweetBox">
-    <form>
-      <div className="tweetBox__input">
-        <Avatar src="https://avataaars.io/?avatarStyle=Circle&topType=Turban&accessoriesType=Prescription02&hatColor=White&facialHairType=BeardMedium&facialHairColor=BrownDark&clotheType=Overall&clotheColor=Blue03&eyeType=Happy&eyebrowType=Angry&mouthType=Eating&skinColor=Yellow" />
-      </div>
-    </form>
-  </div>
-);
+export default TweetBox;
