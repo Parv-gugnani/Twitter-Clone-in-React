@@ -2,7 +2,6 @@ import "./App.css";
 import Feed from "./Feed";
 import Sidebar from "./Sidebar.js";
 import TweetBox from "./TweetBox";
-import Feed from "./Feed";
 import SidebarOption from "./SidebarOption";
 import Post from "./Post";
 
