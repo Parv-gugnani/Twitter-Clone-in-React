@@ -1,6 +1,7 @@
 import { Avatar } from "@material-ui/core";
 import {
   ChatBubbleOutline,
+  ExposureTwoTone,
   FavoriteBorder,
   Publish,
   Repeat,
@@ -42,3 +43,5 @@ function Post({ displayName, username, verified, text, image, avatar }) {
     </div>
   );
 }
+
+export default Post;
